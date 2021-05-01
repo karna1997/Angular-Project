@@ -1,0 +1,33 @@
+<p>child1 works!</p>
+
+
+<div [style.background]="rating_value<6?'red':'green'">@Input Decorator</div>
+
+<h2>{{parentData}}</h2>
+<h2>{{childProperty}}</h2>
+<h2>ID::{{ParentJsonData.id}}</h2>
+<h2>Name::{{ParentJsonData.name}}</h2>
+<h2>Post::{{ParentJsonData.post}}</h2>
+
+<table border="2">
+
+    <thead>
+        <th>Sr.No</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Post</th>
+        <th>Contact_No</th>
+    </thead>
+
+    <tbody>
+        <tr  *ngFor="let item of ParentArrObj ; index as i">
+
+            <td>{{i+1}}</td>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.post}}</td>
+            <td>{{item.Mob_No}}</td>
+
+        </tr>
+    </tbody>
+</table>

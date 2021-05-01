@@ -1,0 +1,55 @@
+<p>parent works!</p>
+
+ 
+ <!-- <app-child1 [parentData]="strData"></app-child1>  -->
+<!-- 
+ <app-child1 
+ [ParentJsonData]="JsonObj"
+ [ParentArrObj]="arrObj"
+ [childProperty]="Demo"
+ [rating_value]="rating"
+
+ ></app-child1> -->
+  
+
+ <!-- Write a Program to send rating(as number) from  
+parent component to child component. In child component 
+check whether rating is less than 6 then apply background color 
+ to div as ‘red’ else apply ‘green’ color -->
+
+ <hr>
+<!--  
+ <app-child2 (childEvent)="FromChild2Data=$event"  ></app-child2>
+ <h2>Data From child::{{FromChild2Data}}</h2> -->
+<!-- 
+ <app-child2 (child2Event1)="FromChildJsonData=$event"></app-child2>
+ <h2>Id::{{FromChildJsonData.id}}</h2>
+ <h2>Name::{{FromChildJsonData.name}}</h2>
+ <h2>Post::{{FromChildJsonData.post}}</h2>
+ <h2>Status::{{FromChildJsonData.status}}</h2>  -->
+
+ <app-child2 (child2Event2)="FromChild2ArrayOfJson=$event"></app-child2>
+ <table border="2">
+<thead>
+
+    <th>Id</th>
+    <th>Name</th>
+    <th>Post</th>
+    <th>Status</th>
+</thead>
+<tbody>
+<tr *ngFor="let item of FromChild2ArrayOfJson ">
+   
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.post}}</td>
+    <td>{{item.status}}</td>
+</tr>
+
+</tbody>
+
+
+ </table>
+<!-- 
+ <app-child2 (child2Event3)="ArrayFromChild2=$event"></app-child2>
+ <h2>Data From child2: {{ArrayFromChild2}}</h2> -->

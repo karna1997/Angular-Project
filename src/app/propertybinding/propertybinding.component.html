@@ -1,0 +1,26 @@
+<p>propertybinding works!</p>
+
+<!-- symtax=> [attribute_name]="property_name "-->
+
+<input type="text" [value]="name" > 
+<br>
+<input type="text" [value]="num1"> 
+<br>
+<input type="text" [value]="flag">
+<br>
+
+<img [src]="imgUrl" alt="">
+<br>
+
+<h2>difference between string interpollation and property binding</h2>
+
+<div hidden= "{{ishidden}}">
+    using  string interpollation
+</div>
+
+<br>
+
+<div [hidden]="ishidden">
+    using property Binding
+</div>
+

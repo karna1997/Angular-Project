@@ -1,0 +1,38 @@
+<p>http-service works!</p>
+<div>
+    <label for ="">Title::</label>&nbsp;&nbsp;
+    <input type="text" placeholder="Enter the title" #mytitle><br><br>
+    <label for="">Body::</label>
+    <input type="text" placeholder="Enter the Body"  #mybody><br><br>
+    <button (click)="onpost(mytitle.value,mybody.value)">submit</button>
+</div>
+<hr>
+<div>
+    <label for ="">Id::</label>&nbsp;&nbsp;
+    <input type="text" placeholder="Enter the Id.." [(ngModel)]="id"  readonly><br><br>
+
+    <label for ="">Title::</label>&nbsp;&nbsp;
+    <input type="text" placeholder="Enter the title.." [(ngModel)]="title"><br><br>
+
+    <label for="">Body::</label>
+    <input type="text" placeholder="Enter the Body"  [(ngModel)]="body"><br><br>
+
+    <button (click)="onFinalUpdate()">Update</button>
+</div>
+<hr>
+<table border="2px">
+    <thead>
+        <th>Id</th>
+        <th>Action</th>
+        <th>Title</th>
+        <th>Body</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of posts">
+            <td> {{item.id}} </td>
+            <td><button (click)="onUpdate(item)">Update</button></td>
+            <td> {{item.title}} </td>
+            <td> {{item.body}} </td>
+        </tr>
+    </tbody>
+</table>

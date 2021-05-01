@@ -1,0 +1,11 @@
+<p>custom-pipe works!</p>
+
+<h2> {{strdetails}} </h2>
+<h2> {{strdetails |summery}} </h2>
+<h2> {{strdetails |summery:0:15}} </h2>
+<h2> {{strdetails |summery:2}} </h2>
+
+<input type="text" placeholder="Enter the text..." #inputtxt > <br>
+<button (click)="onClick(inputtxt.value)">Click</button>
+
+ <h2> {{endusertxt | summery}} </h2> 
